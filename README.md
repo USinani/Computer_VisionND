@@ -1,2 +1,2 @@
 # Computer_VisionND
-Computer Vision Nanodegree - Landmark Detection and Tracking project
+Computer Vision Nanodegree - Landmark Detection and Tracking project.
