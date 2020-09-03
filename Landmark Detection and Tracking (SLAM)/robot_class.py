@@ -91,8 +91,9 @@ class robot:
         # 3. add to the measurements list if either of the distances dx or dy falls inside of measurement_range
         # I have to keep in mind that dx and dy can be negative thus, I have to ensure the values fall within the required measurement range. 
         # Using the abs(dx) I can mitigate this problem by taking only the absolute values of dx and dy.
-            dx, dy = abs(dx), abs(dy)
-            if (dx < self.measurement_range) and (dy < self.measurement_range):
+        # Take the absolute values and use only for comparison, then add the actual values to the list.
+            abs_dx, abs_dy = abs(dx), abs(dy)
+            if (abs_dx <= self.measurement_range) and (abs_dy <= self.measurement_range):
                 measurements.append([index, dx, dy])
             
         # return the final complete list of measurements
